@@ -1,9 +1,5 @@
 const numbers = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
-const winConditions = [
-  "Would you like to draw another card?",
-  "You have won!",
-  "You have lost!",
-];
+const winConditions = ["Draw another card?", "You have won!", "You have lost!"];
 
 const randomNumber = (arr) => {
   let randomIndex = Math.floor(Math.random() * arr.length);

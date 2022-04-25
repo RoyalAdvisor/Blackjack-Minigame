@@ -23,14 +23,6 @@ const renderGame = () => {
   if (sum.textContent <= 20) return (result.textContent = winConditions[0]);
 };
 
-const drawCard = () => {
-  cards.textContent += " " + newCard;
-  let newResult = (sum.textContent = Math.floor(
-    Number(sum.textContent) + newCard
-  ));
-  checkConditions(newResult);
-};
-
 const checkConditions = (newResult) => {
   if (newResult <= 20) {
     return (result.textContent = winConditions[0]);
@@ -41,6 +33,14 @@ const checkConditions = (newResult) => {
     hasLost = true;
     return (result.textContent = winConditions[2]);
   }
+};
+
+const drawCard = () => {
+  cards.textContent += " " + newCard;
+  let newResult = (sum.textContent = Math.floor(
+    Number(sum.textContent) + newCard
+  ));
+  checkConditions(newResult);
 };
 
 const refresh = () => {

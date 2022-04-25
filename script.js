@@ -24,6 +24,7 @@ let result = document.querySelector(".results");
 const renderGame = () => {
   cards.textContent = firstCard + " " + secondCard;
   sum.textContent += firstCard + secondCard;
+  if (sum.textContent <= 20) return (result.textContent = winConditions[0]);
 };
 
 const drawCard = () => {
